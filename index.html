@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BestTopics - Learn the Best, Be the Best</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+  <style>
+    body {
+      font-family: Arial;
+      font-weight: normal;
+    }
+    h3::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #0ea5e9;
+      margin: 0.5rem auto 1.5rem auto;
+      border-radius: 9999px;
+    }
+    .hover\:shadow-lg:hover {
+      transform: translateY(-4px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 dark:bg-gray-900 text-gray-800 dark:text-white font-normal">
+
+  <!-- Header -->
+  <header class="bg-sky-600 dark:bg-gray-800 text-white p-5 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow group">
+          <img src="images/logo.png" alt="BestTopics Logo" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-150" />
+        </div>
+        <h1 class="text-2xl tracking-wide font-normal">BestTopics</h1>
+      </div>
+      <div class="flex items-center space-x-4">
+        <nav>
+          <ul class="flex space-x-6 text-sm">
+            <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+            <li><a href="#topics" class="hover:text-yellow-300">Topics</a></li>
+            <li><a href="#why" class="hover:text-yellow-300">Why Us</a></li>
+            <li><a href="#featured" class="hover:text-yellow-300">Featured</a></li>
+            <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+          </ul>
+        </nav>
+        <button onclick="toggleTheme()" class="flex items-center gap-2 bg-white text-sky-700 dark:bg-gray-700 dark:text-white px-3 py-1 rounded shadow-sm text-sm hover:bg-sky-100 dark:hover:bg-gray-600 transition">
+  <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:inline" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 4.5a1 1 0 011 1V7a1 1 0 11-2 0V5.5a1 1 0 011-1zM4.5 11a1 1 0 011-1H7a1 1 0 110 2H5.5a1 1 0 01-1-1zm13.5 0a1 1 0 011-1H19a1 1 0 110 2h-1.5a1 1 0 01-1-1zM12 17a1 1 0 011 1v1.5a1 1 0 11-2 0V18a1 1 0 011-1zm6.364-9.364a1 1 0 011.414 0l1.06 1.06a1 1 0 11-1.414 1.414l-1.06-1.06a1 1 0 010-1.414zM4.636 14.364a1 1 0 011.414 0l1.06 1.06a1 1 0 11-1.414 1.414l-1.06-1.06a1 1 0 010-1.414zM4.636 6.636a1 1 0 010 1.414L3.576 9.11a1 1 0 11-1.414-1.414l1.06-1.06a1 1 0 011.414 0zM19.364 14.364a1 1 0 010 1.414l-1.06 1.06a1 1 0 11-1.414-1.414l1.06-1.06a1 1 0 011.414 0zM12 9a3 3 0 100 6 3 3 0 000-6z"/>
+  </svg>
+  <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline dark:hidden" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 0010.14 9.79z"/>
+  </svg>Theme
+</button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-sky-100 dark:bg-gray-800 py-20 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-4xl text-sky-700 dark:text-white mb-4 font-normal">Explore the Best Topics to Boost Your Knowledge</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300">From Web Development to AI, UI/UX, and more — dive into expertly curated content to upgrade your skills and stay ahead in the digital age.</p>
+    </div>
+  </section>
+
+  <!-- Topics Section -->
+  <section id="topics" class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl text-center text-sky-700 dark:text-white mb-10 font-normal">Top Learning Categories</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-sky-50 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl mb-2 text-sky-800 dark:text-white font-medium">Web Development</h4>
+          <p class="text-gray-600 dark:text-gray-300">Master HTML, CSS, JavaScript, PHP, Laravel, and more with hands-on guides and projects.</p>
+        </div>
+        <div class="bg-sky-50 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl mb-2 text-sky-800 dark:text-white font-medium">Artificial Intelligence</h4>
+          <p class="text-gray-600 dark:text-gray-300">Explore machine learning, neural networks, and AI applications with practical examples.</p>
+        </div>
+        <div class="bg-sky-50 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl mb-2 text-sky-800 dark:text-white font-medium">UI/UX Design</h4>
+          <p class="text-gray-600 dark:text-gray-300">Learn design principles, tools like Figma, and how to create beautiful user interfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="bg-sky-50 dark:bg-gray-800 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl text-sky-700 dark:text-white mb-10 font-normal">Why Choose BestTopics?</h3>
+      <div class="grid md:grid-cols-3 gap-10 text-left">
+        <div>
+          <img src="images/experience.png" alt="Experience" class="w-16 mb-4">
+          <h4 class="text-xl text-sky-800 dark:text-white font-medium">Expert Instructors</h4>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Our instructors bring real-world experience into every course.</p>
+        </div>
+        <div>
+          <img src="images/project.png" alt="Projects" class="w-16 mb-4">
+          <h4 class="text-xl text-sky-800 dark:text-white font-medium">Project-Based Learning</h4>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Learn by building practical, real-world projects across various domains.</p>
+        </div>
+        <div>
+          <img src="images/community.png" alt="Community" class="w-16 mb-4">
+          <h4 class="text-xl text-sky-800 dark:text-white font-medium">Community Support</h4>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Join a vibrant learner community and get help anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section id="featured" class="py-16 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl text-center text-sky-700 dark:text-white mb-10 font-normal">Featured Topics</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-gray-800">
+          <img src="images/webdev.jpg" alt="Web Dev" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="text-sky-800 dark:text-white text-lg font-medium">Modern Web Development</h4>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-gray-800">
+          <img src="images/ai.jpg" alt="AI" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="text-sky-800 dark:text-white text-lg font-medium">AI & Machine Learning</h4>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-gray-800">
+          <img src="images/uiux.jpg" alt="UI UX" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h4 class="text-sky-800 dark:text-white text-lg font-medium">UI/UX Design Principles</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More sections... (Testimonials, Newsletter, Contact, Footer remain same with added dark:* where needed) -->
+<!-- Testimonials -->
+<section class="bg-sky-100 dark:bg-gray-800 py-16">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h3 class="text-3xl text-sky-700 dark:text-sky-300 mb-10 font-normal">What Learners Say</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow text-left">
+        <p class="text-gray-700 dark:text-gray-300 mb-3">"BestTopics transformed the way I learn! The tutorials are simple, project-based, and fun!"</p>
+        <span class="text-sm text-sky-600 dark:text-sky-400 font-medium">– Priya S., Student</span>
+      </div>
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow text-left">
+        <p class="text-gray-700 dark:text-gray-300 mb-3">"The AI course helped me land my dream internship. Thank you for this platform!"</p>
+        <span class="text-sm text-sky-600 dark:text-sky-400 font-medium">– Arjun M., AI Enthusiast</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="py-16 bg-white dark:bg-gray-900">
+  <div class="max-w-2xl mx-auto text-center px-4">
+    <h3 class="text-3xl text-sky-700 dark:text-sky-300 mb-6 font-normal">Join Our Newsletter</h3>
+    <p class="text-gray-600 dark:text-gray-400 mb-6">Stay updated with the latest topics, courses, and learning resources.</p>
+    <form class="flex flex-col sm:flex-row items-center gap-4">
+      <input type="email" placeholder="Enter your email" class="w-full sm:w-auto flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500" required />
+      <button class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-md transition">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-16 bg-sky-50 dark:bg-gray-800">
+  <div class="max-w-3xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl mb-6 text-center text-sky-700 dark:text-sky-300 font-normal">Get in Touch</h2>
+    <form class="space-y-6">
+      <div class="relative">
+        <input type="text" placeholder=" " class="peer w-full border-b-2 border-gray-300 dark:border-gray-600 bg-transparent text-gray-800 dark:text-white focus:border-sky-600 focus:outline-none p-2" required />
+        <label class="absolute left-2 top-2 text-sm text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-sky-600">Your Name</label>
+      </div>
+      <div class="relative">
+        <input type="email" placeholder=" " class="peer w-full border-b-2 border-gray-300 dark:border-gray-600 bg-transparent text-gray-800 dark:text-white focus:border-sky-600 focus:outline-none p-2" required />
+        <label class="absolute left-2 top-2 text-sm text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-sky-600">Your Email</label>
+      </div>
+      <div class="relative">
+        <textarea placeholder=" " rows="4" class="peer w-full border-b-2 border-gray-300 dark:border-gray-600 bg-transparent text-gray-800 dark:text-white focus:border-sky-600 focus:outline-none p-2 resize-none" required></textarea>
+        <label class="absolute left-2 top-2 text-sm text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-2.5 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-sky-600">Your Message</label>
+      </div>
+      <button type="submit" class="w-full bg-sky-600 text-white py-3 rounded-md font-medium hover:bg-sky-700 transition">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-sky-700 to-sky-800 dark:from-gray-800 dark:to-gray-900 text-white py-8 mt-10">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center sm:items-start">
+    <!-- Logo and Info -->
+    <div class="flex items-center space-x-4 mb-6 sm:mb-0">
+      <img src="images/logo.png" alt="BestTopics Logo" class="w-12 h-12 rounded-full border-2 border-white shadow" />
+      <div>
+        <h4 class="text-xl font-semibold">BestTopics</h4>
+        <p class="text-sm text-sky-200 dark:text-gray-400">Learn the Best, Be the Best.</p>
+        <p class="text-xs mt-1 text-sky-100 dark:text-gray-500">&copy; 2025 BestTopics. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- Navigation Links -->
+    <div class="flex space-x-6 text-sm">
+      <a href="#" class="hover:text-yellow-300 transition">Home</a>
+      <a href="#topics" class="hover:text-yellow-300 transition">Topics</a>
+      <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+    </div>
+  </div>
+  <!-- Credits -->
+  <div class="mt-6 text-center text-base sm:text-lg text-sky-200 dark:text-gray-300 font-medium">
+    Website designed by <span class="text-white font-semibold drop-shadow-sm">Janvi Lumbhani</span>
+  </div>
+</footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleTheme = () => {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    });
+  </script>
+
+</body>
+</html>
