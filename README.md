@@ -19,14 +19,22 @@ A fully responsive educational website built with **HTML**, **CSS**, **JavaScrip
 - JavaScript
 - Tailwind CSS
 
-## 📷 Screenshots
-
-> You can add images from `/images/` folder here  
-> Example:
-> ![Homepage Screenshot](ScreenShort/page 1.png)
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/CodeWithJanvi/BesttTopics-html-css-javascript-tailwind.git
+
+📁 Folder Structure
+
+📦 BestTopics/
+ ┣ 📁 images/
+ ┣ 📁 screenshort/
+ ┣ 📄 index.html
+ ┣ 📄 README.md
+
+🙋‍♀️ Author
+Made with ❤️ by Janvi Lumbhani
+
+
