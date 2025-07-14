@@ -23,10 +23,10 @@ A fully responsive educational website built with **HTML**, **CSS**, **JavaScrip
 
 > You can add images from `/images/` folder here  
 > Example:
-> ![Homepage Screenshot](images/homepage.png)
+> ![Homepage Screenshot](ScreenShort/page 1.png)
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com//BestTopics-html-css-javascript-tailwind.git
+   git clone https://github.com/CodeWithJanvi/BesttTopics-html-css-javascript-tailwind.git
