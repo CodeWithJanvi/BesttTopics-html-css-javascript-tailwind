@@ -34,6 +34,10 @@ A fully responsive educational website built with **HTML**, **CSS**, **JavaScrip
  ┣ 📄 index.html
  ┣ 📄 README.md
 
+ 📌 Live Demo
+ 
+website link:-https://janvi-besttopics.netlify.app
+
 🙋‍♀️ Author
 Made with ❤️ by Janvi Lumbhani
 
